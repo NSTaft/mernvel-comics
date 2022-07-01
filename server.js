@@ -2,6 +2,8 @@
 const express = require('express')
 const path = require('path')
 const favicon = require('serve-favicon')
+require('dotenv').config()
+require('./config/database')
 
 // starting express application
 const app = express()
