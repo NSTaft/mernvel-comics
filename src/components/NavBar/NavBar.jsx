@@ -5,13 +5,13 @@ export default function NavBar() {
     return (
         <>
             <nav>
-                <Link>Browse Library</Link>
+                <Link to="">Browse Library</Link>
                 &nbsp; | &nbsp;
-                <Link>My Collection</Link>
+                <Link to="">My Collection</Link>
                 &nbsp; | &nbsp;
-                <Link>My Account</Link>
+                <Link to="">My Account</Link>
                 &nbsp; | &nbsp;
-                <Link>Logout</Link>
+                <Link to="">Logout</Link>
             </nav>
         </>
     )

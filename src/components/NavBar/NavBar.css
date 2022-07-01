@@ -1,8 +1,8 @@
-nav {
-    font-family: badaboom-pro;
-}
-
 @font-face {
     font-family: 'badaboom';
-    src: url('public/badaboom_bb/BADABB__.TTF');
-  }
+    src: url('/Users/kangm/Desktop/SEI-59/unit-3/deliverables/mernvel-comics/public/badaboom_bb/BADABB__.TTF');
+}
+
+nav {
+    font-family: 'badaboom';
+}
