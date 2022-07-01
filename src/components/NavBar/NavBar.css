@@ -3,6 +3,9 @@
     src: url('/src/components/NavBar/badaboom_bb/BADABB__.TTF');
 }
 
-nav {
+a {
     font-family: 'badaboom';
+    font-size: x-large;
+    text-decoration: none;
+
 }
