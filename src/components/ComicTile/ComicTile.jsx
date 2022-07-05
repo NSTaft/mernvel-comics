@@ -1,11 +1,14 @@
+import "./ComicTile.css"
+
 function ComicTile(props){
     const image_URL = props.comic.thumbnail.path + "." + props.comic.thumbnail.extension
-    
+    const alternative = props.comic.title + " title photo"
+
     return (
         <>
-            <div>
-                <h3>{props.comic.title}</h3>
-                <img src={image_URL} alt="" />
+            <div className="comic-tile">
+                <h4>{props.comic.title}</h4>
+                <img src={image_URL} alt={alternative} />
             </div>
         </>
     )
