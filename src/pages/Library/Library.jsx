@@ -1,6 +1,6 @@
 import * as marvelService from "../../utilities/marvel-service"
 import {useState} from 'react'
-
+import "./Library.css"
 
 function Library(){
     const [comicList, setComicList] = useState([])
@@ -10,7 +10,7 @@ function Library(){
         // const filteredData = comicList.Comic.title
         // const displayedData = filteredData.slice(0,8)
         setComicList([...comicList.data.results])
-        console.log(comicList.data.results)
+        console.log(comicList)
     }
 
     return (

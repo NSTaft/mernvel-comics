@@ -6,7 +6,7 @@ export async function getMarvelComics(search){
     let PRIVATE = `75ac0b3c5d100bb75cb86dc1964102f006b93fc1`
     let TIMESTAMP = 'sussybaka'
     let HASH = md5(`${TIMESTAMP}${PRIVATE}${API_KEY}`)
-    let URL = `${BASE_URL}/v1/public/comics?ts=${TIMESTAMP}&apikey=${API_KEY}&hash=${HASH}`
+    let URL = `${BASE_URL}/v1/public/comics?ts=${TIMESTAMP}&apikey=${API_KEY}&hash=${HASH}&limit=30`
     const response = await fetch(URL)
     if (response.ok) {
         return response.json()
