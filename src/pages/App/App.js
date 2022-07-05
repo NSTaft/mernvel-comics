@@ -14,15 +14,21 @@ function App() {
 
 	return (
 		<div className='App'>
-			<Header />
-			<NavBar />
-			<Routes>
-				<Route path='/account' element={<Account />} />
-				<Route path='/account/collection' element={<Collection />} />
-				<Route path='/library' element={<Library />} />
-				<Route path='/authentication' element={<AuthPage />} />
-				<Route path='/*' element={<Navigate to='/authentication' />} />
-			</Routes>
+			{user ? (
+				<>
+					<Header />
+					<NavBar />
+					<Routes>
+						<Route path='/account' element={<Account />} />
+						<Route path='/account/collection' element={<Collection />} />
+						<Route path='/library' element={<Library />} />
+						<Route path='/authentication' element={<AuthPage />} />
+						<Route path='/*' element={<Navigate to='/authentication' />} />
+					</Routes>
+				</>
+			) : (
+				<AuthPage />
+			)}
 		</div>
 	)
 }
