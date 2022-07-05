@@ -14,7 +14,10 @@ export default class SignUpForm extends Component {
     
     //event handler for the form's submit button
     handleSubmit = (evt) => {
-        //evt.preventDefault();
+        this.setState({
+            [evt.target.name]: evt.target.value,
+            error: ""
+        });
     }
     
     render() {
