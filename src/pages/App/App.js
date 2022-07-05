@@ -13,7 +13,7 @@ import {getUser} from '../../utilities/user-service'
 
 
 function App() {
-	const [user, setUser] = useState(null)
+	const [user, setUser] = useState(getUser())
 
 	return (
 		<div className='App'>
@@ -30,7 +30,7 @@ function App() {
 					</Routes>
 				</>
 			) : (
-				<AuthPage />
+				<AuthPage setUser={setUser} />
 			)}
 		</div>
 	)
