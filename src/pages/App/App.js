@@ -8,6 +8,9 @@ import AuthPage from '../AuthPage/AuthPage.jsx'
 import Collection from '../Collection/Collection.jsx'
 import Library from '../Library/Library.jsx'
 import { useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
+import {getUser} from '../../utilities/user-service'
+
 
 function App() {
 	const [user, setUser] = useState(null)
