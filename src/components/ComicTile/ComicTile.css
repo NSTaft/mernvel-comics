@@ -1,0 +1,16 @@
+.comic-tile {
+    background-color: white;
+    width: 40vmin;
+    height: auto;
+    border: 1px solid black;
+    margin: 1vmin 0 1vmin 0;
+}
+
+img {
+    width: 30vmin;
+    height: auto;
+}
+
+img:hover {
+    opacity: 50%;
+}
