@@ -19,6 +19,12 @@ export default class SignUpForm extends Component {
             error: ""
         });
     }
+
+    // handle submit is what sends user info to the database.
+    handleSubmit = async (evt) => {
+        // Prevent form from being submitted to the server
+        evt.preventDefault();
+    };
     
     render() {
         const disable = this.state.password !== this.state.confirm;
