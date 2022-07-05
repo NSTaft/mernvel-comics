@@ -11,7 +11,7 @@ function Library(){
         // const filteredData = comicList.Comic.title
         // const displayedData = filteredData.slice(0,8)
         setComicList([...comicList.data.results])
-        console.log(comicList)
+        console.log(comicList.data.results)
     }
 
     return (
