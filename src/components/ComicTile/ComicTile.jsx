@@ -1,7 +1,9 @@
-function ComicTile(props){
+function ComicTile(){
     return (
         <>
-            <h1>Comic Tile</h1>
+            <div>
+                <h1>Comic Tile</h1>
+            </div>
         </>
     )
 }

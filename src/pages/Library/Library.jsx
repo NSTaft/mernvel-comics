@@ -1,5 +1,6 @@
 import * as marvelService from "../../utilities/marvel-service"
 import {useState} from 'react'
+import ComicTile from '../../components/ComicTile/ComicTile'
 import "./Library.css"
 
 function Library(){
@@ -18,7 +19,7 @@ function Library(){
         <h1>Library Page</h1>
         <button onClick={getMarvelComics}>Get Comic List</button>
         {comicList.map((c, idx) => (
-            <div key={idx}>{c.title}</div>
+            <ComicTile comic={c} key={idx}/>
         ))}
     </>
     )
