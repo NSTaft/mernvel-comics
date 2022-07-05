@@ -1,5 +1,6 @@
 import { Component } from "react";
 import "./SignUpForm.css"
+import {signUp} from '../../utilities/users/users-services'
 
 export default class SignUpForm extends Component {
   state = {
@@ -13,7 +14,7 @@ export default class SignUpForm extends Component {
 
     
     //event handler for the form's submit button
-    handleSubmit = (evt) => {
+    handleChange = (evt) => {
         this.setState({
             [evt.target.name]: evt.target.value,
             error: ""
