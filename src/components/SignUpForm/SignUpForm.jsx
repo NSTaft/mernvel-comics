@@ -1,6 +1,6 @@
 import { Component } from "react";
 import "./SignUpForm.css"
-import {signUp} from '../../utilities/users/users-services'
+import { signUp } from '../../utilities/users/users-services'
 
 export default class SignUpForm extends Component {
   state = {
@@ -36,7 +36,6 @@ export default class SignUpForm extends Component {
             // will resolve to the user object included in the
             // payload of the JSON Web Token (JWT)
             const user = await signUp(formData);
-            
             this.props.setUser(user);
         } catch {
             // An error occurred
