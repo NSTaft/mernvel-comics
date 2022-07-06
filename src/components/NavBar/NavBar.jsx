@@ -4,15 +4,17 @@ import { Link } from 'react-router-dom'
 export default function NavBar() {
     return (
         <>
+        <div className='d-flex p-2 justify-content-center'>
             <nav>
-                <Link to="/library">Browse Library</Link>
+                <Link to="/library" className='text-decoration-none'>Browse Library</Link>
                 &nbsp; | &nbsp;
-                <Link to="/account/collection">My Collection</Link>
+                <Link to="/account/collection" className='text-decoration-none'>My Collection</Link>
                 &nbsp; | &nbsp;
-                <Link to="/account">My Account</Link>
+                <Link to="/account" className='text-decoration-none'>My Account</Link>
                 &nbsp; | &nbsp;
-                <Link to="/authentication">Logout</Link>
+                <Link to="/authentication" className='text-decoration-none'>Logout</Link>
             </nav>
+        </div>
         </>
     )
 }
