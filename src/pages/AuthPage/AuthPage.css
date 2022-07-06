@@ -1,0 +1,10 @@
+.authForms {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 5%;
+    height: 50%;
+    padding: 0;
+    margin: 0;
+}
