@@ -24,8 +24,7 @@ function App() {
 						<Route path='/account' element={<Account />} />
 						<Route path='/account/collection' element={<Collection />} />
 						<Route path='/library' element={<Library />} />
-						<Route path='/authentication' element={<AuthPage />} />
-						<Route path='/*' element={<Navigate to='/authentication' />} />
+						<Route path='/*' element={<Navigate to='/account' />} />
 					</Routes>
 				</>
 			) : (
