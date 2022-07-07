@@ -38,10 +38,20 @@ function Library() {
         getMarvelComics("", offset - 9, limit)
     }
 
+    function formSearch(evt){
+        setSearch(evt.target.value);
+    }
+
+    function searchSubmit(evt){
+        evt.preventDefault();
+        setSearch(evt.target.value)
+        setSearch("")
+    }
+
     return (
         <>
-            <form>
-                <input type="text" name="search" required value={search}/>
+            <form onSubmit={searchSubmit}>
+                <input type="text" name="search" required value={search} onChange={formSearch}/>
                 <button type="submit">SEARCH TITLE</button>
             </form>
             <nav className="nav">
