@@ -9,6 +9,7 @@ import Collection from '../Collection/Collection.jsx'
 import Library from '../Library/Library.jsx'
 import { useState } from 'react'
 import {getUser} from '../../utilities/users/users-services'
+import ComicDetail from '../ComicDetail/ComicDetail'
 
 
 function App() {

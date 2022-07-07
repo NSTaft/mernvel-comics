@@ -1,6 +1,7 @@
 import * as marvelService from "../../utilities/marvel-service"
 import { useEffect, useState } from 'react'
 import ComicTile from '../../components/ComicTile/ComicTile'
+import { Link } from 'react-router-dom'
 import "./Library.css"
 
 function Library() {
@@ -51,7 +52,7 @@ function Library() {
             <div className="library">
                 <div className="grid">
                     {comicList.map((c, idx) => (
-                        <ComicTile comic={c} key={idx} />
+                        <ComicTile comic={c} key={idx}/>
                     ))}
                 </div>
             </div>

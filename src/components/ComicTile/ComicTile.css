@@ -2,6 +2,8 @@
 
 .comic-tile {
     color: white;
+    height: auto;
+    padding: 30px;
     border: 1px solid black;
     background-color: white;
 }
