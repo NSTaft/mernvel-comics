@@ -6,20 +6,25 @@ import "./Library.css"
 function Library() {
     const [comicList, setComicList] = useState([])
     let total = 0
+    let offset = 0
+    let limit = 20
 
-    async function getMarvelComics(search = "") {
-        const comicList = await marvelService.getMarvelComics(search)
+    async function getMarvelComics(search = "", offset, limit) {
+        const comicList = await marvelService.getMarvelComics(search, offset, limit)
         setComicList([...comicList.data.results])
         console.log(comicList.data)
         total = comicList.data.total
     }
 
     useEffect(() => {
-        getMarvelComics("")
+        getMarvelComics("", offset, limit)
     }, [])
 
     return (
         <>
+            <nav className="nav">
+                <li></li>
+            </nav>
             <div className="library">
                 <div className="grid">
                     {comicList.map((c, idx) => (

@@ -4,3 +4,10 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
 }
+
+li {
+    border: 1px solid black;
+    margin: 0 0.5vmin 0.5vmin 0;
+    width: 50px;
+    height: 25px;
+}
