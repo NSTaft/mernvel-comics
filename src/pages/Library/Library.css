@@ -1,0 +1,6 @@
+.grid {
+    display: grid;
+    padding: 0 10% 0 10%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
