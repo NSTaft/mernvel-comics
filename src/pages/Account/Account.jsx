@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import * as userService from "../../utilities/users/users-services"
 
 
 function Account(props) {
@@ -8,11 +9,16 @@ function Account(props) {
 
     function handleSubmit(evt) {
         evt.preventDefault()
-        console.log(updateUser)
+        // hit the database to change something or to update things
+        // hit the database
+        // update the information
+        // save the information
+        userService.updateUser(updateUser)
+        setUpdateUser(updateUser)
     }
 
     function formUser(evt) {
-        const newFormUser = {[evt.target.name]: evt.target.value}
+        const newFormUser = {...updateUser, [evt.target.name]: evt.target.value}
         setUpdateUser(newFormUser)
     }
 

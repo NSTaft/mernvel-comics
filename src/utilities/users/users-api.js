@@ -36,3 +36,13 @@ export async function login(credentials) {
 		throw new Error('Invalid credentials, please try again')
 	}
 }
+
+export async function updateUser(newUser){
+	const res = await fetch(`${BASE_URL}/update`, {
+		method: 'POST',
+		headers: { 'Content-Type': 'application/json' },
+		body: JSON.stringify(newUser),
+	})
+
+	console.log(res)
+}
