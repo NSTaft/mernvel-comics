@@ -5,11 +5,13 @@ import "./Library.css"
 
 function Library() {
     const [comicList, setComicList] = useState([])
+    let total = 0
 
     async function getMarvelComics(search = "") {
         const comicList = await marvelService.getMarvelComics(search)
         setComicList([...comicList.data.results])
         console.log(comicList.data)
+        total = comicList.data.total
     }
 
     useEffect(() => {
