@@ -7,7 +7,7 @@ function Library() {
     const [comicList, setComicList] = useState([])
     let total = 0
     let offset = 0
-    let limit = 20
+    let limit = 9
 
     async function getMarvelComics(search = "", offset, limit) {
         const comicList = await marvelService.getMarvelComics(search, offset, limit)
@@ -23,7 +23,8 @@ function Library() {
     return (
         <>
             <nav className="nav">
-                <li></li>
+                <li>Previous</li>
+                <li>Next</li>
             </nav>
             <div className="library">
                 <div className="grid">
