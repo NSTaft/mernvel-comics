@@ -8,8 +8,16 @@ export async function getMarvelComics(search, offset, limit){
     let HASH = md5(`${TIMESTAMP}${PRIVATE}${API_KEY}`)
     let OFFSET = offset
     let LIMIT = limit
+    let URL
     
-    let URL = `${BASE_URL}/v1/public/comics?ts=${TIMESTAMP}&apikey=${API_KEY}&hash=${HASH}&limit=${LIMIT}&offset=${OFFSET}`
+    if (search) {
+        URL = `${BASE_URL}/v1/public/comics?ts=${TIMESTAMP}&apikey=${API_KEY}&hash=${HASH}&limit=${LIMIT}&offset=${OFFSET}&title=${search}`
+    }
+    else {
+        URL = `${BASE_URL}/v1/public/comics?ts=${TIMESTAMP}&apikey=${API_KEY}&hash=${HASH}&limit=${LIMIT}&offset=${OFFSET}`
+    }
+    console.log(URL)
+
     const response = await fetch(URL)
     if (response.ok) {
         return response.json()

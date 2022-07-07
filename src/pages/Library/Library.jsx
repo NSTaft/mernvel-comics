@@ -8,6 +8,7 @@ function Library() {
     const [comicList, setComicList] = useState([])
     const [offset, setOffset] = useState(0)
     const [firstpage, setFirstPage] = useState(true)
+    const [search, setSearch] = useState('')
     let limit = 9
     let total = 0
     let lastpage = false
@@ -37,8 +38,23 @@ function Library() {
         getMarvelComics("", offset - 9, limit)
     }
 
+    function formSearch(evt){
+        setSearch(evt.target.value);
+    }
+
+    function searchSubmit(evt){
+        evt.preventDefault();
+        setSearch(evt.target.value)
+        getMarvelComics(search, offset, limit)
+        setSearch("")
+    }
+
     return (
         <>
+            <form onSubmit={searchSubmit}>
+                <input type="text" name="search" required value={search} onChange={formSearch}/>
+                <button type="submit">SEARCH A TITLE</button>
+            </form>
             <nav className="nav">
                 {firstpage ? (
                     <li onClick={nextPage}>Next</li>
