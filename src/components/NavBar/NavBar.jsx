@@ -11,14 +11,14 @@ export default function NavBar({setUser}) {
     return (
         <>
         <div className='d-flex p-2 justify-content-center'>
-            <nav>
-                <Link to="/library" className='text-decoration-none'>Browse Library</Link>
+            <nav class="navbar-primary">
+                <Link to="/library" className='text-decoration-none link-dark fs-1'>Browse Library</Link>
                 &nbsp; | &nbsp;
-                <Link to="/account/collection" className='text-decoration-none'>My Collection</Link>
+                <Link to="/account/collection" className='text-decoration-none link-dark fs-1'>My Collection</Link>
                 &nbsp; | &nbsp;
-                <Link to="/account" className='text-decoration-none'>My Account</Link>
+                <Link to="/account" className='text-decoration-none link-dark fs-1'>My Account</Link>
                 &nbsp; | &nbsp;
-                <Link to="/" onClick={handleLogOut} className='text-decoration-none'>Logout</Link>
+                <Link to="/" onClick={handleLogOut} className='text-decoration-none link-dark fs-1'>Logout</Link>
             </nav>
         </div>
         </>
