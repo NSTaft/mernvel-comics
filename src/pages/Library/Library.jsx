@@ -8,10 +8,8 @@ function Library() {
 
     async function getMarvelComics(search = "") {
         const comicList = await marvelService.getMarvelComics(search)
-        // const filteredData = comicList.Comic.title
-        // const displayedData = filteredData.slice(0,8)
         setComicList([...comicList.data.results])
-        console.log(comicList)
+        console.log(comicList.data)
     }
 
     useEffect(() => {
@@ -24,11 +22,7 @@ function Library() {
                 <h1>Library Page</h1>
                 <div>
                     {comicList.map((c, idx) => (
-                        <>
-                            <div>
-                                <ComicTile comic={c} key={idx} />
-                            </div>
-                        </>
+                        <ComicTile comic={c} key={idx} />
                     ))}
                 </div>
             </div>
