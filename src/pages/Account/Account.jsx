@@ -30,7 +30,7 @@ function Account(props) {
                     <input type="text" name="lastname" value={updateUser.lastname} onChange={formUser}/>
                     <input type="text" name="email" value={updateUser.email} onChange={formUser} />
                     <button type="submit">EDIT ACCOUNT INFO</button>
-
+                    
                 </form>
             </div>
 
