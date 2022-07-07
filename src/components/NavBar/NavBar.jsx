@@ -11,7 +11,7 @@ export default function NavBar({setUser}) {
     return (
         <>
         <div className='d-flex p-2 justify-content-center'>
-            <nav class="navbar-primary">
+            <nav className="navbar-primary">
                 <Link to="/library" className='text-decoration-none link-dark fs-1'>Browse Library</Link>
                 &nbsp; | &nbsp;
                 <Link to="/account/collection" className='text-decoration-none link-dark fs-1'>My Collection</Link>

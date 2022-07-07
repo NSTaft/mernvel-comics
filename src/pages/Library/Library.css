@@ -1,6 +1,19 @@
-.background {
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdz6KusIl_cso0Hv0fZjxKu5cRiSfEp96fQg&usqp=CAU');
+.grid {
+    display: grid;
+    padding: 0 10% 0 10%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
-.comic-row {
-    margin: 0 0 0 3vmin;
+
+li {
+    border: 1px solid black;
+    margin: 0 0.5vmin 0.5vmin 0;
+    width: 100px;
+    height: 25px;
+    background-color: white;
+}
+
+li:hover {
+    opacity: 50%;
+    cursor: default;
 }
