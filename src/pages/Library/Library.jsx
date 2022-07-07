@@ -1,5 +1,5 @@
 import * as marvelService from "../../utilities/marvel-service"
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import ComicTile from '../../components/ComicTile/ComicTile'
 import "./Library.css"
 
@@ -14,15 +14,18 @@ function Library() {
         console.log(comicList.data.results)
     }
 
+    useEffect(() => {
+        getMarvelComics("")
+    }, [])
+
     return (
         <>
-            <div className="background">
+            <div>
                 <h1>Library Page</h1>
-                <button onClick={getMarvelComics}>Get Comic List</button>
-                <div className="row comic-row">
+                <div>
                     {comicList.map((c, idx) => (
                         <>
-                            <div className="col">
+                            <div>
                                 <ComicTile comic={c} key={idx} />
                             </div>
                         </>
