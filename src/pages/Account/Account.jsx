@@ -26,9 +26,9 @@ function Account(props) {
         <>
             <div>
                 <form onSubmit={handleSubmit}>
-                    <input type="text" name="firstname" value={props.user.firstname} onChange={formUser}/>
-                    <input type="text" name="lastname" value={props.user.lastname} onChange={formUser}/>
-                    <input type="text" name="email" value={props.user.email} onChange={formUser} />
+                    <input type="text" name="firstname" value={updateUser.firstname} onChange={formUser}/>
+                    <input type="text" name="lastname" value={updateUser.lastname} onChange={formUser}/>
+                    <input type="text" name="email" value={updateUser.email} onChange={formUser} />
                     <button type="submit">EDIT ACCOUNT INFO</button>
 
                 </form>

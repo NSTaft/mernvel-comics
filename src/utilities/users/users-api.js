@@ -43,6 +43,4 @@ export async function updateUser(newUser){
 		headers: { 'Content-Type': 'application/json' },
 		body: JSON.stringify(newUser),
 	})
-
-	console.log(res)
 }
