@@ -6,7 +6,8 @@ const bcrypt = require('bcrypt')
 
 module.exports = {
 	create,
-	login
+	login,
+	update
 };
 
 async function login(req, res) {
@@ -33,6 +34,15 @@ async function create(req, res) {
 	} catch (err) {
 		// Client will check for non-2xx status code
 		// 400 = Bad Request
+		res.status(400).json(err)
+	}
+}
+
+async function update(req, res) {
+	try {
+		const updatedUserFirst = await User.updateOne({email: req.body.email}, {$set: {firstname: req.body.firstname}})
+		const updatedUserLast = await User.updateOne({email: req.body.email}, {$set: {lastname: req.body.lastname}})
+	} catch (err){
 		res.status(400).json(err)
 	}
 }
