@@ -43,4 +43,18 @@ export async function updateUser(newUser){
 		headers: { 'Content-Type': 'application/json' },
 		body: JSON.stringify(newUser),
 	})
+	if (res.ok) {
+		// res.json() will resolve to the JWT
+		return res.json()
+	} else {
+		throw new Error('Invalid Change')
+	}
+}
+
+export async function deleteUser(user){
+	const res = await fetch(`${BASE_URL}/delete`, {
+		method: 'POST',
+		headers: { 'Content-Type': 'application/json' },
+		body: JSON.stringify(user),
+	})
 }
