@@ -50,3 +50,11 @@ export async function updateUser(newUser){
 		throw new Error('Invalid Change')
 	}
 }
+
+export async function deleteUser(user){
+	const res = await fetch(`${BASE_URL}/delete`, {
+		method: 'POST',
+		headers: { 'Content-Type': 'application/json' },
+		body: JSON.stringify(user),
+	})
+}

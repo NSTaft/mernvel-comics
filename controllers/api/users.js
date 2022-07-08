@@ -7,7 +7,8 @@ const bcrypt = require('bcrypt')
 module.exports = {
 	create,
 	login,
-	update
+	update,
+	deleteUser
 };
 
 async function login(req, res) {
@@ -45,6 +46,15 @@ async function update(req, res) {
 
 		const updatedUser = await User.find({email: req.body.email})
 		res.json(createJWT(updatedUser))
+
+	} catch (err){
+		res.status(400).json(err)
+	}
+}
+
+async function deleteUser(req, res){
+	try {
+		const deletedStatus = await User.deleteOne({email: req.body.email})
 
 	} catch (err){
 		res.status(400).json(err)

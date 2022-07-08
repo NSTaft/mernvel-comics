@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import  { Link } from 'react-router-dom'
 import * as userService from "../../utilities/users/users-services"
 
 
@@ -22,6 +23,10 @@ function Account(props) {
         setUpdateUser(newFormUser)
     }
 
+    function handleDelete(){
+        userService.deleteUser(updateUser)
+    }
+
     return (
         <>
             <div>
@@ -33,6 +38,8 @@ function Account(props) {
                     <h3>Any changes will be reflected when you log back in the next time!</h3>
                     
                 </form>
+                <button onClick={handleDelete}>DELETE ACCOUNT</button>
+                <h3>If you deleted your account, please refresh the page!</h3>
             </div>
 
 

@@ -51,3 +51,8 @@ export async function updateUser(newUser){
 	localStorage.setItem('token', token)
 	return getUser()
 }
+
+export async function deleteUser(user){
+	usersAPI.deleteUser(user)
+	localStorage.removeItem('token');
+}
