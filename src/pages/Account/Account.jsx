@@ -30,6 +30,7 @@ function Account(props) {
                     <input type="text" name="lastname" value={updateUser.lastname} onChange={formUser}/>
                     <input type="text" name="email" value={updateUser.email} onChange={formUser} />
                     <button type="submit">EDIT ACCOUNT INFO</button>
+                    <h3>Any changes will be reflected when you log back in the next time!</h3>
                     
                 </form>
             </div>

@@ -43,4 +43,10 @@ export async function updateUser(newUser){
 		headers: { 'Content-Type': 'application/json' },
 		body: JSON.stringify(newUser),
 	})
+	if (res.ok) {
+		// res.json() will resolve to the JWT
+		return res.json()
+	} else {
+		throw new Error('Invalid Change')
+	}
 }
