@@ -24,7 +24,8 @@ function Account(props) {
     }
 
     function handleDelete(){
-        userService.deleteUser(updateUser)
+        userService.deleteUser(updateUser) 
+        window.location.reload(false);
     }
 
     return (
@@ -39,7 +40,6 @@ function Account(props) {
                     
                 </form>
                 <button onClick={handleDelete}>DELETE ACCOUNT</button>
-                <h3>If you deleted your account, please refresh the page!</h3>
             </div>
 
 
