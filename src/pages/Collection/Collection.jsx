@@ -1,8 +1,15 @@
-function Collection(){
+import ComicTile from "../../components/ComicTile/ComicTile.jsx"
+
+function Collection() {
     return (
-    <>
-    <h1>Collections Page</h1>
-    </>
+        <>
+            <h1>Collections Page</h1>
+            <div>
+                {/* <ComicTile /> */}
+
+            </div>
+
+        </>
     )
 }
 
